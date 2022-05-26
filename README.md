@@ -1,5 +1,8 @@
 # exercices
 
+## Site
+<a href="https://exercices.netlify.app/">Exercícios</a>
+
 ## Project setup
 ```
 yarn install
