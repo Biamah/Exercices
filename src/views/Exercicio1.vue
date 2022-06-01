@@ -22,7 +22,7 @@
             </Container>
         </form>
 
-        <button class="button__outline"><router-link to="/">Voltar</router-link></button>
+        <router-link to="/" class="button__outline">Voltar</router-link>
   </div>
 </template>
 

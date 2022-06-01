@@ -16,14 +16,21 @@ export default {
 
 <style>
 :root {
-  --primary-color: #79a6a3;
+  --primary-color: #E14E54;
   --second-color: #e7e7e7;
+  --blue: #0083FF;
+  --white: #fff;
+  --black: #000;
+
+  --family-primary: 'Exo', sans-serif;
 }
 
 body {
-  background-color: var(--primary-color);
+  background-image: linear-gradient(to bottom right, var(--primary-color), var(--second-color));
+  background-repeat: no-repeat;
   overflow: hidden;
   margin: 0;
+  min-height: 100vh;
 }
 
 #app {
