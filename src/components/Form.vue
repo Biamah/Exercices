@@ -16,7 +16,7 @@ export default {
 
 <style lang="scss" scoped>
 form {
-    height: 50vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
