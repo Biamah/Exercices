@@ -8,7 +8,7 @@
             <Container>
                 <div class="content">
                     <div class="content">
-                        <Label for="metros" class="label">Digite o valor em metros</Label>
+                        <Label for="metros">Digite o valor em metros</Label>
 
                         <Input type="text" id="metros" />
                     </div>
