@@ -4,19 +4,17 @@
 
       <p>Escreva um programa que leia um valor em metros e o exiba convertido em milímetros</p>
 
-      <Form @submit="calculo">
+      <Form @submit.prevent="calc">
             <Container>
                 <div class="content">
-                    <div class="content">
-                        <Label for="metros">Digite o valor em metros</Label>
+                    <Label for="metros">Digite o valor em metros</Label>
 
-                        <Input type="text" id="metros" />
-                    </div>
-
-                    <Button>Descubra</Button>
-
-                    <span class="result">{{ result }}</span>
+                     <Input type="number" id="metros" v-model="number" />
                 </div>
+
+                 <Button>Descubra</Button>
+
+                <span class="result" v-if="result">O valor em milimetros é: {{ result }}</span>
             </Container>
       </Form>
 
@@ -38,6 +36,17 @@ export default {
         Label,
         Input,
         Button
+    },
+    data: function(){
+        return {
+            number: '',
+            result: ''
+        }
+    },
+    methods: {
+        calc(){
+            this.result = Number(this.number) * 1000;
+        }
     }
 }
 </script>
