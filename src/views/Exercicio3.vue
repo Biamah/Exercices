@@ -5,7 +5,7 @@
         <p>Escreva um programa que leia a quantidade de dias, horas,
 minutos e segundos do usuário. Calcule o total em segundos.</p>
 
-        <Form>
+        <Form @submit.prevent="calc">
             <Container>
                 <div class="content">
                     <Label for="days">Dias</Label>
@@ -51,6 +51,42 @@ export default {
         Label,
         Input,
         Button
+    },
+    data: function(){
+        return {
+            days: '',
+            hours: '',
+            minutes: '',
+            seconds: '',
+            result: '',
+            timeMinutes: 60,
+            timeSeconds: 60
+        }
+    },
+    methods: {
+        dayToSeconds(){
+            const toHour = Number(this.days) * 24;
+            let calcDay = toHour * this.timeMinutes * this.timeSeconds;
+
+            return calcDay;
+        },
+        hourToSeconds(){
+            let calcHour = Number(this.hours) * this.timeMinutes * this.timeSeconds;
+
+            return calcHour;
+        },
+        minuteToSeconds(){
+            let calcMinute = Number(this.minutes) * this.timeSeconds;
+
+            return calcMinute;
+        },
+        calc(){
+            const calcDays = this.dayToSeconds();
+            const calcHours = this.hourToSeconds();
+            const calcMinutes = this.minuteToSeconds();
+
+            this.result = calcDays + calcHours + calcMinutes + Number(this.seconds);
+        }
     }
 }
 </script>
