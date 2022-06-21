@@ -28,7 +28,7 @@ export default {
 body {
   background-image: linear-gradient(to bottom right, var(--primary-color), var(--second-color));
   background-repeat: no-repeat;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin: 0;
   min-height: 100vh;
 }

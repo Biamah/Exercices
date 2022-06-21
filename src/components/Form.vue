@@ -1,16 +1,12 @@
 <template>
-  <form @submit="handleSubmit">
+  <form>
       <slot /> 
   </form>
 </template>
 
 <script>
 export default {
-    methods: {
-        handleSubmit(e) {
-            this.$emit('submit', e)
-        }
-    }
+
 }
 </script>
 
